@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Linking the Common Style sheet-->
+        <link rel="stylesheet" href="common.css">
+        <!--Linking the Shop Style sheet-->
+        <link rel="stylesheet" href="Shop.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">  
+        <title>Shop</title>
+  </head>
+
+  <body>
+    <!--navigation bar-->
+    <div class="navbar">
+        <!--logo-->
+        <img class="logo" src="logo.png" alt="logo">
+        
+        <!--links in navigation bar-->
+        <div class="nav_links_container">
+            <a class="nav_links" href="main.html">Home</a>
+            <a class="nav_links" href="">Site map</a>
+            <a class="nav_links" href="">Gallery</a>
+            <a class="nav_links" href="quiz.html">Quiz</a>
+            <a class="nav_links" href="comment.html">Feedback</a>
+            <a class="nav_links" href="Shop.html">Cart</a>
+        </div>
+
+        <a class="nav_links about_nav_link" href="studentdeta.html">About Us</a>
+    </div>
+
+    <div class="shop">
+        <div class="shop-intro">
+            <h2>Welcome to Shop</h2>
+            <p>Shop art online with Brush Poetry to find the art you’ve been looking for. Our portfolio of original art showcases stunning creations from both new talents and established career artists from around the globe. Our online art shop brings you unique art you cannot find anywhere else, at prices you can afford, with worldwide shipping.</p>
+        </div>
+
+        <div class="cart-screen-overlay">
+            <div class="cart-screen">
+                <svg id="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                    <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 011.06 0L12 10.94l5.47-5.47a.75.75 0 111.06 1.06L13.06 12l5.47 5.47a.75.75 0 11-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 01-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 010-1.06z" clip-rule="evenodd" />
+                </svg>
+                <h2>Your Cart</h2>
+                <h1 class="cart-is-empty">Cart is empty</h1>
+                <div class="product-rows"></div>
+                <div class="total">
+                    <h1 class="cart-total">TOTAL</h1>
+                    <span class="total-price">$0</span>
+                    <div class="buyer-details">
+                        <form>
+                            <label for="fname">Name: </label>
+                            <br>
+                            <input type="text" name="fname" id="fname" required>    
+                            <br>
+                            <label for="email">Email Address: </label>
+                            <br>
+                            <input type="email" id="email" name="email" required>
+                        </form>
+                    </div>
+
+                    <div class="cart-buttons">
+                        <button class="clear-cart-btn" onclick="clearCart()">CLEAR CART</button>
+                        <div onsubmit="return validateForm()">
+                            <button type="submit" class="purchase-btn" onclick="if(validateForm()) { showDetails(); document.getElementById('id01').style.display='block'; }">PLACE ORDER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="details">
+            <!--End of cart screen-->
+            <div class="cart-btn">
+                <svg id="cart" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6"><path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+                </svg>
+                <div class ="cart-quantity">0</div>
+            </div>
+        </div>
+
+        <div class="products-view">
+            <!--Products  -->
+            <div class="items-container">
+                <h2>Realism Paintings</h2>
+                <div class="realism-products">
+                    <div class="card-1 card">
+                        <img class="product-image" src="ShopProducts/Realism1.jpg" alt="Realism Art">
+                        <div class="product-name">THESEUS</div>
+                        <div class="product-price">$162</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-2 card">
+                        <img class="product-image" src="ShopProducts/Realism2.jpg" alt="Realism Art">
+                        <div class="product-name">BLACK HANKA</div>
+                        <div class="product-price">$150</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-3 card">
+                        <img class="product-image" src="ShopProducts/Realism3.jpg" alt="Realism Art">
+                        <div class="product-name">RED FRIDA</div>
+                        <div class="product-price">$160</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-4 card">
+                        <img class="product-image" src="ShopProducts/Realism4.jpg" alt="Realism Art">
+                        <div class="product-name">DUCHESS IN BLACK</div>
+                        <div class="product-price">$165</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-5 card">
+                        <img class="product-image" src="ShopProducts/Realism5.jpg" alt="Realism Art">
+                        <div class="product-name">DARK WATERS 1</div>
+                        <div class="product-price">$150</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div> 
+                <br>
+                <hr class="line-breaker">
+
+                <h2>Abstract Paintings</h2>
+                <div class="abstract-products">
+                    <div class="card-6 card">
+                        <img class="product-image" src="ShopProducts/Abstract1.jpg" alt="Abstract Art">
+                        <div class="product-name">WILD GAMES</div>
+                        <div class="product-price">$120</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-7 card">
+                        <img class="product-image" src="ShopProducts/Abstract2.jpg" alt="Abstract Art">
+                        <div class="product-name">MENORCA</div>
+                        <div class="product-price">$130</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-8 card">
+                        <img class="product-image" src="ShopProducts/Abstract3.jpg" alt="Abstract Art">
+                        <div class="product-name">ESCAPISM</div>
+                        <div class="product-price">$160</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-9 card">
+                        <img class="product-image" src="ShopProducts/Abstract4.jpg" alt="Abstract Art">
+                        <div class="product-name">DÉJÀ VU</div>
+                        <div class="product-price">$165</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-10 card">
+                        <img class="product-image" src="ShopProducts/Abstract5.jpg" alt="Abstract Art">
+                        <div class="product-name">EXOTICA</div>
+                        <div class="product-price">$160</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div> 
+                <br>
+
+                <hr class="line-breaker">
+                
+                <h2>Expressionism Paintings</h2>
+                <div class="expressionism-products">
+                    <div class="card-11 card">
+                        <img class="product-image" src="ShopProducts/Expressionism1.jpg" alt="Expressionism Art">
+                        <div class="product-name">RIO DE JANEIRO</div>
+                        <div class="product-price">$162</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+        
+                    <div class="card-12 card">
+                        <img class="product-image" src="ShopProducts/Expressionism2.jpg" alt="Expressionism Art">
+                        <div class="product-name">CAT IN THE WINDOW</div>
+                        <div class="product-price">$130</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-13 card">
+                        <img class="product-image" src="ShopProducts/Expressionism3.jpg" alt="Expressionism Art">
+                        <div class="product-name">GREEN PUZZLE</div>
+                        <div class="product-price">$120</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-14 card">
+                        <img class="product-image" src="ShopProducts/Expressionism4.jpg" alt="Expressionism Art">
+                        <div class="product-name">RETALES</div>
+                        <div class="product-price">$162</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+
+                    <div class="card-15 card">
+                        <img class="product-image" src="ShopProducts/Expressionism5.jpg" alt="Expressionism Art">
+                        <div class="product-name">SWING Nr. 2</div>
+                        <div class="product-price">$160</div>
+                        <button class="add-to-cart">Add to cart</button>
+                    </div>
+                </div>
+            </div>     
+        </div>
+    </div>    
+
+    <div class="checkout" id="id01">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+        <form class="checkout-content" onsubmit="return validateCheckForm()">
+            <div class="form-container">
+                <h1>Order Summary</h1>
+                <p>Reference: BrushPoetry Order</p>
+                <p id="total-price-text">Total Price: </p>
+                <br>
+                <hr class="break">
+                <div class="payment-details">
+                    <h3>Payment Details</h3>
+                    <label for="ccnum">Card Number<span class="required-mark">*</span></label>
+                    <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" maxlength="16" size="16" required>
+                    <br>
+                    <label for="cname">Card Holder's Name<span class="required-mark">*</span></label>
+                    <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                    <br>
+                    <div class="card-info">
+                        <div class="expiry-details">
+                            <div>
+                                <label for="expmonth">Expiry Month<span class="required-mark">*</span></label>
+                                <input type="text" id="expmonth" name="expmonth" placeholder="MM" maxlength="2" required>
+                            </div>
+    
+                            <div>
+                                <label for="expyear">Expiry Year<span class="required-mark">*</span></label>
+                                <input type="text" id="expyear" name="expyear" placeholder="YY" maxlength="2" size="2" required>
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="cname">Security Code<span class="required-mark">*</span></label>
+                            <input type="text" id="cvv" name="cvv" placeholder="259" maxlength="3" size="3" required>
+                        </div> 
+                    </div>
+                </div>
+
+                <hr class="break">
+
+                <div class="billing-address">
+                    <h3>Billing Address</h3>
+                    <label for="address1">Address 1<span class="required-mark">*</span></label>
+                    <input type="text" id="address1" name="address1" placeholder="542 W. 15th Street" required>
+                    <br>
+                    <label for="address2">Address 2</label>
+                    <input type="text" id="address2" name="address2" placeholder="542 W. 15th Street">
+                    <br>
+                    <label for="city">Town/City<span class="required-mark">*</span></label>
+                    <input type="text" id="city" name="city" placeholder="New York" required>
+                    <br>
+                    <label for="state">State/Region</label>
+                    <input type="text" id="state" name="state" placeholder="Central">
+                    <br>
+                    <label for="zipcode">Passcode/Zip Code<span class="required-mark">*</span></label>
+                    <input type="text" id="zipcode" name="zipcode" placeholder="W1W 6UW" required>
+                    <br>
+                    <label for="country">Country<span class="required-mark">*</span></label>
+                    <input type="text" id="country" name="country" placeholder="Australia" required> 
+                </div>
+
+                <hr class="break">
+
+                <div class="contact-details">
+                    <div class="contact-info">
+                        <div class="contact-info-view">
+                            <h3>Contact Details</h3>
+                            <label>
+                                <select id="menu">
+                                    <option value="edit" selected>Edit</option>
+                                    <option value="close">Close</option>
+                                </select> 
+                            </label> 
+                        </div>
+                        <div id="output"></div>
+                        <br>
+                    </div>
+                
+                    <hr class="break"> 
+                </div>
+                <div class="clear">
+                    <button class="cancel-button" type="button" onclick="document.getElementById('id01').style.display='none'">Cancel Payment</button>
+                    <button class="payment-button" id="make-payment-btn">Make Payment</button>
+                </div>  
+            </div> 
+        </form>
+    </div> 
+
+    <!--footer-->
+    <hr>
+    <div class="foot">
+        <div class="foot_icons">
+            <a href="https://www.instagram.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://www.facebook.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://www.pinterest.com"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.37 2.094A10.003 10.003 0 0 0 8.002 21.17a7.757 7.757 0 0 1 .163-2.293c.185-.839 1.296-5.463 1.296-5.463a3.739 3.739 0 0 1-.324-1.577c0-1.485.857-2.593 1.923-2.593a1.334 1.334 0 0 1 1.342 1.508c0 .9-.578 2.262-.88 3.54a1.544 1.544 0 0 0 1.575 1.923c1.898 0 3.17-2.431 3.17-5.301 0-2.2-1.457-3.848-4.143-3.848a4.746 4.746 0 0 0-4.93 4.794 2.96 2.96 0 0 0 .648 1.97.48.48 0 0 1 .162.554c-.046.184-.162.623-.208.784a.354.354 0 0 1-.51.254c-1.384-.554-2.036-2.077-2.036-3.816 0-2.847 2.384-6.255 7.154-6.255 3.796 0 6.32 2.777 6.32 5.747 0 3.909-2.177 6.848-5.394 6.848a2.861 2.861 0 0 1-2.454-1.246s-.578 2.316-.692 2.754a8.026 8.026 0 0 1-1.019 2.131c.923.28 1.882.42 2.846.416a9.988 9.988 0 0 0 9.996-10.003 10.002 10.002 0 0 0-8.635-9.903z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://twitter.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(218,165,32,1)"/></svg></a>
+        </div>
+        
+        <div class="copyright">
+            <svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" fill="#daa520"/></svg>
+            <p class= "foot_text">2023 Brush Poetry. All rights reserved.</p>
+        </div>
+        <a class="foot_text" href="PageEditor_Student1.html">Page Editor</a>
+    </div>
+
+    <script  src="Shop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,143 @@
+body{
+    background:linear-gradient(to right, rgb(0, 36, 36), rgb(0, 20, 20),rgb(0, 9, 9))
+}
+
+/* css of hero content */
+.hero{
+    border: solid rgb(0, 36, 36);
+    background-image: url("https://images.pexels.com/photos/2894275/pexels-photo-2894275.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-attachment: fixed;
+    background-size: cover;
+    }
+
+.hero_text{
+    background-color: rgb(255, 255, 255,.6);
+    margin: 100px 100px;
+    margin-top: 120px;
+    padding: 200px;
+    text-align:center;
+    border-radius: 25px;
+} 
+
+.hero_text h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size:80px;
+}
+
+.hero_text p{
+    font-size: 20px;
+}
+
+/* css for links for content pages */
+.content_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 100px 5px;
+    text-align: center;    
+}
+
+.content_container p{
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.content_container img{
+    height: 250px;
+    width:350px;
+    border-radius: 25px;
+    
+}
+
+.content_container img:hover{
+    height: 275px;
+    width: 375px;
+    
+}
+
+.content1{
+    background-color: white;
+    padding-top: 10px;
+    margin:0px 77px;
+    border-radius: 25px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.content1:hover{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content1 img{
+    padding-top: 10px;
+}
+
+
+.content2{
+    background-color: white;
+    padding-bottom: 10px;
+    margin:0px 77px;
+    border-radius: 25px;
+    -webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: 0.3s ease-in-out;
+	transition: 0.3s ease-in-out;
+}
+
+.content2:hover{
+    -webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
+.content2 img{
+    padding-bottom: 10px;
+}
+
+.quote h1{
+    color: white;
+    padding: 75px 100px;
+    text-align: center;
+}
+
+/* ccs for quote by Pablo Picasso */
+.quote{
+    display: flex;
+    border: 1px solid #daa520;
+    padding: 10px 20px;
+    margin: 50px 77px;
+
+}
+
+.quote p{
+    color: white;
+    font-size: 20px;
+    text-align: right; 
+}
+
+.offered{
+    display:flex;
+    gap:50px;
+    padding: 70px 100px;
+    justify-content: space-between;
+    
+}
+
+.offered_content{
+    text-align: center;
+    color:white ;
+}
+
+.offered p{
+    font-size: 15px;
+    padding : 5px;
+    text-align: center;
+}
+
+span{
+    font-weight: bold;
+}
+    

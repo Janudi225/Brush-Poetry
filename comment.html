@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- linking the common css file -->
+    <link rel="stylesheet" href="common.css">
+    <!--linking the css file to the comment form -->
+    <link rel="stylesheet" href="comment.css">
+    <!-- linking the google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <!-- title of the webpage -->
+    <title>Comment form</title>
+</head>
+
+
+<body id="body">
+    <!--navigation bar-->
+    <div class="navbar">
+        <!--logo-->
+        <img class="logo"
+        src="logo.png" 
+        alt="logo">
+
+        <!--links in navigation bar-->
+        <div class="nav_links_container">
+
+            <!-- linking the home page -->
+            <a class="nav_links" href="main.html">
+                Home
+            </a>
+            
+            <!-- linking the site map -->
+            <a class="nav_links" href="">
+                Site map
+            </a>
+
+            <!-- linking the gallery -->
+            <a class="nav_links" href="">
+                Gallery
+            </a>
+
+            <!-- linking the quiz  -->
+            <a class="nav_links" href="quiz.html">
+                Quiz
+            </a>
+
+            <!-- linking the feedback form -->
+            <a class="nav_links" href="comment.html">
+                Feedback
+            </a>
+
+            <!-- linking the shop -->
+            <a class="nav_links" href="Shop.html">
+                Shop
+            </a>
+        </div>
+
+
+        <!-- linking the about us page -->
+        <a class="nav_links about_nav_link" href="studentdeta.html">
+            About Us
+        </a>
+    </div>
+
+
+    <br>
+
+
+
+
+    <!-- creating the form -->
+    <form id="comment_form" name="comment_form" action="mailto:janudi.20210825@iit.ac.lk" method="post" enctype="text/plain" onsubmit="return valid_submit()" >
+        <h1>Feedback form</h1>
+        <fieldset>
+
+            <!-- age group -->
+
+            <!-- creating the error message for age group -->
+            <div id="null_age" class="error" >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zm-8.66 16h15.588L12 5.5 4.206 19zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z" fill="rgba(255,255,255,1)"/></svg>
+                <p  >Please select your age to continue</p>
+            </div>
+
+            <!-- creating radio buttons for age -->
+            <div id="age_field" class="que">
+                <p>Please select your age group :</p>
+                <br>
+                
+                <input type="radio" name="Age" id="under" value="12-15 years">
+                <label for="under" >12-15 years </label>
+
+                <br>
+
+                <input type="radio" name="Age" id="mid" value="15-18 years">
+                <label for="mid" >15-18 years</label>
+
+                <br>
+
+                <input type="radio" name="Age" id="over" value="0ver 18 years">
+                <label for="over" >Over 18 years </label>
+
+            </div>
+            
+            <!-- rating -->
+
+            <!-- creating the error message for the rating -->
+            <div id="null_rate" class="error" >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zm-8.66 16h15.588L12 5.5 4.206 19zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z" fill="rgba(255,255,255,1)"/></svg>
+                <p>Please select a rating to continue</p>
+            </div>
+
+            <!-- creating radio buttons for rating -->
+            <div id="rate_field" class="que">
+                <p>How satisfied are you with our website? <br> Choose from 0-10, where 0 is extremely dissatisfied and 10 is extremely satisfied.</p>
+                <br>
+                <div class="rating">
+                    <div class="rate_level">
+                        <label for="rate_0">0 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_0" value="0"> 
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_1" >1 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_1" value="1">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_2" >2 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_2" value="2">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_3" >3 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_3" value="3">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_4" >4 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_4" value="4">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_5" >5 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_5" value="5">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_6" >6 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_6" value="6">
+                    </div>
+                
+                    <div class="rate_level">
+                        <label for="rate_7" >7 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_7" value="7">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_8" >8 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_8" value="8">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_9" >9 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_9" value="9">
+                    </div>
+
+                    <div class="rate_level">
+                        <label for="rate_10" >10 </label>
+                        <br>
+                        <input type="radio" name="Rating" id="rate_10" value="10">
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <!-- reason for rating-->
+
+            <!-- creating the error message for the reason for rating -->
+            <div id="null_reason" class="error" >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12.866 3l9.526 16.5a1 1 0 0 1-.866 1.5H2.474a1 1 0 0 1-.866-1.5L11.134 3a1 1 0 0 1 1.732 0zm-8.66 16h15.588L12 5.5 4.206 19zM11 16h2v2h-2v-2zm0-7h2v5h-2V9z" fill="rgba(255,255,255,1)"/></svg>
+                <p>Please fill out this part to continue</p>
+            </div>
+            
+            <div id="reason_field"  class="que">
+                <label for="reason">Please could you mention the reason for giving us the above rating ?</label>
+                <br>
+                <br>
+                <!-- creating a textarea to input the reason -->
+                <textarea name="Reason" rows="3" cols="80" id="reason" ></textarea>
+            </div>
+
+            <!-- mode that was used -->
+            <div class="que">
+                <label for="mode" >How did you complete this task today? (Optional)</label>
+                <br>  
+                <br>
+                <!-- creating a drop down to select the method used -->
+                <select name="Used_mode" id="mode">  
+                    <option class="select_value" value="None selected">~~Please select ~~</option>
+                    <option class="select_value" value="Phone">Phone</option>
+                    <option class="select_value" value="Website">Website</option>
+                    <option class="select_value" value="Webchat">Webchat</option>
+                    <option class="select_value" value="Social media">Social media</option>
+                    <option class="select_value" value="Email">Email</option>
+                </select>
+            </div>
+
+            <!-- mode that would be prefered -->
+            <div class="que">
+                <label for="pre_mode">If you had to complete this task again, how would you prefer to do it? (Optional)</label>
+                <br> 
+                <br> 
+                <!-- creating a drop down to select the method that the ser prefer to use -->
+                <select name="Preferred_mode" id="pre_mode">  
+                    <option class="select_value" value="None selected">~~Please select ~~</option>
+                    <option class="select_value" value="Phone">Phone</option>
+                    <option class="select_value" value="Website">Website</option>
+                    <option class="select_value" value="Webchat">Webchat</option>
+                    <option class="select_value" value="Socia media">Social media</option>
+                    <option class="select_value" value="Email">Email</option>
+                </select>
+            </div>
+
+
+            <!-- knowing mode -->
+            <div class="que">
+                <p>How did you get to know about us ?</p>
+                <br>
+
+                <!-- creating checkboxes for the user to select how they found out about our webpage -->
+                <input type ="checkbox" name="Knew_from" id="social" value="Social_media">
+                <label for ="social">Social media</label>
+                <br>
+                <input type="checkbox" name="Knew_from" id="friends" value="Friends">
+                <label for="friends">Friends</label>
+                <br>
+                <input type="checkbox" name="Knew_from" id="insti" value="Academic_Institute">
+                <label for="insti">Academic Institute</label>
+                <br>
+                <input type="checkbox" name="Knew_from" id="other" value="Other">
+                <label for="other">Other</label>
+                <br>
+            </div>
+
+            <!-- recommendations-->
+            <div class="que">
+                <label for="recom">Do you have any recommondations on how we can further improve this applicaion? (Optional)</label>
+                <br>
+                <br>
+                <!-- creating a textarea to input the recommendations -->
+                <textarea id="recom" name="Recommendations" rows="5" cols="80" ></textarea>
+
+            </div>
+
+            <!-- submit button -->
+            <input class="submit_but" type="submit" value="Submit">
+        </fieldset>
+    </form>
+
+    <!-- creating a thank you message to display after the submittion -->
+    <div id="thank">
+        <h1> Thank you!</h1>
+        <p>Thank you for taking the time to give us your valuable feedback on your experience.</p>
+    </div>
+
+
+    <!--footer-->
+    <hr>
+    <div class="foot">
+        <div class="foot_icons">
+            <a href="https://www.instagram.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0-2a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm6.5-.25a1.25 1.25 0 0 1-2.5 0 1.25 1.25 0 0 1 2.5 0zM12 4c-2.474 0-2.878.007-4.029.058-.784.037-1.31.142-1.798.332-.434.168-.747.369-1.08.703a2.89 2.89 0 0 0-.704 1.08c-.19.49-.295 1.015-.331 1.798C4.006 9.075 4 9.461 4 12c0 2.474.007 2.878.058 4.029.037.783.142 1.31.331 1.797.17.435.37.748.702 1.08.337.336.65.537 1.08.703.494.191 1.02.297 1.8.333C9.075 19.994 9.461 20 12 20c2.474 0 2.878-.007 4.029-.058.782-.037 1.309-.142 1.797-.331.433-.169.748-.37 1.08-.702.337-.337.538-.65.704-1.08.19-.493.296-1.02.332-1.8.052-1.104.058-1.49.058-4.029 0-2.474-.007-2.878-.058-4.029-.037-.782-.142-1.31-.332-1.798a2.911 2.911 0 0 0-.703-1.08 2.884 2.884 0 0 0-1.08-.704c-.49-.19-1.016-.295-1.798-.331C14.925 4.006 14.539 4 12 4zm0-2c2.717 0 3.056.01 4.122.06 1.065.05 1.79.217 2.428.465.66.254 1.216.598 1.772 1.153a4.908 4.908 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428.047 1.066.06 1.405.06 4.122 0 2.717-.01 3.056-.06 4.122-.05 1.065-.218 1.79-.465 2.428a4.883 4.883 0 0 1-1.153 1.772 4.915 4.915 0 0 1-1.772 1.153c-.637.247-1.363.415-2.428.465-1.066.047-1.405.06-4.122.06-2.717 0-3.056-.01-4.122-.06-1.065-.05-1.79-.218-2.428-.465a4.89 4.89 0 0 1-1.772-1.153 4.904 4.904 0 0 1-1.153-1.772c-.248-.637-.415-1.363-.465-2.428C2.013 15.056 2 14.717 2 12c0-2.717.01-3.056.06-4.122.05-1.066.217-1.79.465-2.428a4.88 4.88 0 0 1 1.153-1.772A4.897 4.897 0 0 1 5.45 2.525c.638-.248 1.362-.415 2.428-.465C8.944 2.013 9.283 2 12 2z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://www.facebook.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.879V14.89h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.989C18.343 21.129 22 16.99 22 12c0-5.523-4.477-10-10-10z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://www.pinterest.com"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M13.37 2.094A10.003 10.003 0 0 0 8.002 21.17a7.757 7.757 0 0 1 .163-2.293c.185-.839 1.296-5.463 1.296-5.463a3.739 3.739 0 0 1-.324-1.577c0-1.485.857-2.593 1.923-2.593a1.334 1.334 0 0 1 1.342 1.508c0 .9-.578 2.262-.88 3.54a1.544 1.544 0 0 0 1.575 1.923c1.898 0 3.17-2.431 3.17-5.301 0-2.2-1.457-3.848-4.143-3.848a4.746 4.746 0 0 0-4.93 4.794 2.96 2.96 0 0 0 .648 1.97.48.48 0 0 1 .162.554c-.046.184-.162.623-.208.784a.354.354 0 0 1-.51.254c-1.384-.554-2.036-2.077-2.036-3.816 0-2.847 2.384-6.255 7.154-6.255 3.796 0 6.32 2.777 6.32 5.747 0 3.909-2.177 6.848-5.394 6.848a2.861 2.861 0 0 1-2.454-1.246s-.578 2.316-.692 2.754a8.026 8.026 0 0 1-1.019 2.131c.923.28 1.882.42 2.846.416a9.988 9.988 0 0 0 9.996-10.003 10.002 10.002 0 0 0-8.635-9.903z" fill="rgba(218,165,32,1)"/></svg></a>
+            <a href="https://twitter.com/"><svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30"><path fill="none" d="M0 0h24v24H0z"/><path d="M22.162 5.656a8.384 8.384 0 0 1-2.402.658A4.196 4.196 0 0 0 21.6 4c-.82.488-1.719.83-2.656 1.015a4.182 4.182 0 0 0-7.126 3.814 11.874 11.874 0 0 1-8.62-4.37 4.168 4.168 0 0 0-.566 2.103c0 1.45.738 2.731 1.86 3.481a4.168 4.168 0 0 1-1.894-.523v.052a4.185 4.185 0 0 0 3.355 4.101 4.21 4.21 0 0 1-1.89.072A4.185 4.185 0 0 0 7.97 16.65a8.394 8.394 0 0 1-6.191 1.732 11.83 11.83 0 0 0 6.41 1.88c7.693 0 11.9-6.373 11.9-11.9 0-.18-.005-.362-.013-.54a8.496 8.496 0 0 0 2.087-2.165z" fill="rgba(218,165,32,1)"/></svg></a>
+        </div>
+        
+        <div class="copyright">
+            <svg class="foot_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 2c-4.42 0-8 3.58-8 8s3.58 8 8 8 8-3.58 8-8-3.58-8-8-8zm0 3c1.82 0 3.413.973 4.288 2.428l-1.714 1.029A3 3 0 1 0 12 15a2.998 2.998 0 0 0 2.573-1.456l1.715 1.028A4.999 4.999 0 0 1 7 12c0-2.76 2.24-5 5-5z" fill="#daa520"/></svg>
+            <p class= "foot_text">2023 Brush Poetry. All rights reserved.</p>
+        </div>
+        <a class="foot_text" href="PageEditor_Student2.html">Page Editor</a>
+        
+        
+    </div>
+
+    <!-- Connecting the java script file -->
+    <script SRC="comment.js"></script> 
+</body>
+
+
+
+</html>
